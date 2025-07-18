@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Tix</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic Tac Tix</h1>
+
+      <div class="game-controls">
+        <div class="grid-size-selector">
+          <label for="gridSize">Grid Size:</label>
+          <select id="gridSize">
+            <option value="3">3x3 (Classic)</option>
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7">7x7</option>
+            <option value="8">8x8</option>
+          </select>
+        </div>
+
+        <div class="win-condition-selector">
+          <label for="winCondition">Win Condition (in a row):</label>
+          <select id="winCondition">
+            <option value="3">3 in a row</option>
+            <option value="4">4 in a row</option>
+            <option value="5">5 in a row</option>
+          </select>
+        </div>
+
+        <button id="newGameBtn">New Game</button>
+      </div>
+
+      <div class="game-info">
+        <div class="current-player">
+          Current Player: <span id="currentPlayer">X</span>
+        </div>
+        <div class="game-status" id="gameStatus">Game in progress</div>
+      </div>
+
+      <div class="game-board-container">
+        <div id="gameBoard" class="game-board"></div>
+      </div>
+
+      <div class="score-board">
+        <div class="score">
+          <span class="player-x">Player X: <span id="scoreX">0</span></span>
+          <span class="player-o">Player O: <span id="scoreO">0</span></span>
+          <span class="ties">Ties: <span id="scoreTies">0</span></span>
+        </div>
+        <button id="resetScoreBtn">Reset Score</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
