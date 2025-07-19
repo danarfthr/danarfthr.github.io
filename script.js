@@ -17,6 +17,7 @@ class TicTacToe {
     this.gridSizeSelect = document.getElementById("gridSize");
     this.winConditionSelect = document.getElementById("winCondition");
     this.newGameBtn = document.getElementById("newGameBtn");
+    this.skipTurnBtn = document.getElementById("skipTurnBtn");
     this.resetScoreBtn = document.getElementById("resetScoreBtn");
     this.gameBoard = document.getElementById("gameBoard");
     this.currentPlayerSpan = document.getElementById("currentPlayer");
@@ -39,6 +40,10 @@ class TicTacToe {
 
     this.newGameBtn.addEventListener("click", () => {
       this.initializeGame();
+    });
+
+    this.skipTurnBtn.addEventListener("click", () => {
+      this.skipTurn();
     });
 
     this.resetScoreBtn.addEventListener("click", () => {
@@ -116,6 +121,13 @@ class TicTacToe {
       this.updateDisplay();
       return;
     }
+
+    this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
+    this.updateDisplay();
+  }
+
+  skipTurn() {
+    if (!this.gameActive) return;
 
     this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
     this.updateDisplay();

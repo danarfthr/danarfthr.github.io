@@ -72,6 +72,7 @@ select:focus {
 }
 
 #newGameBtn,
+#skipTurnBtn,
 #resetScoreBtn {
   background: linear-gradient(45deg, #667eea, #764ba2);
   color: white;
@@ -84,7 +85,12 @@ select:focus {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+#skipTurnBtn {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+}
+
 #newGameBtn:hover,
+#skipTurnBtn:hover,
 #resetScoreBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
