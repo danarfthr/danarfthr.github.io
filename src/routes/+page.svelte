@@ -22,7 +22,7 @@
 
 <svelte:head>
 	<title>danarfthr</title>
-	<meta name="description" content="Personal portfolio of Danar, {title}" />
+	<meta name="description" content="danar's personal portfolio 💼" />
 </svelte:head>
 
 <main>
