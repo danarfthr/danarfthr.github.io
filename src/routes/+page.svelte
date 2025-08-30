@@ -1,28 +1,28 @@
 <script lang="ts">
 	// You can replace these with your actual information
-	const name = "Danar";
-	const title = "Data Scientist and AI Enthusiast";
+	const name = "Hi! I'm Danar 👋";
+	const title = "Data Science and AI Enthusiast 📊";
 	const email = "fathurahmandanar@gmail.com";
 	const github = "https://github.com/danarfthr";
 	const linkedin = "https://linkedin.com/in/danarfthr";
 	
 	const projects = [
 		{
-			title: "Project One",
-			description: "A brief description of your first project and the technologies used.",
-			link: "https://github.com/yourusername/project1"
+			title: "RUU Sentiment Analysis 📢",
+			description: "Analyzed 4,472 tweets on the 2025 TNI Law Revision using Python and NLP. Found 75.8% negative sentiment, highlighting civil-military concerns.",
+			link: "https://github.com/Farscent/gamadata-1"
 		},
 		{
-			title: "Project Two", 
-			description: "A brief description of your second project and its key features.",
-			link: "https://github.com/yourusername/project2"
+			title: "HealthyHen 🐔", 
+			description: "Built an edge-deployable poultry disease detector with EfficientNetV2-S, achieving 90%+ accuracy on chicken feces image classification.",
+			link: "https://github.com/danarfthr/HealthyHen"
 		}
 	];
 </script>
 
 <svelte:head>
-	<title>{name} - Portfolio</title>
-	<meta name="description" content="Personal portfolio of {name}, {title}" />
+	<title>danarfthr</title>
+	<meta name="description" content="Personal portfolio of Danar, {title}" />
 </svelte:head>
 
 <main>
@@ -32,8 +32,7 @@
 			<h1 class="name">{name}</h1>
 			<p class="title">{title}</p>
 			<p class="bio">
-				Passionate about creating elegant solutions to complex problems. 
-				I love building applications that make a difference.
+				Curious mind exploring Data Science and AI. I enjoy turning messy data into meaningful insights and building simple AI-powered tools that (hopefully) make life a little easier 😄
 			</p>
 			<div class="links">
 				<a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -62,7 +61,7 @@
 	<!-- Footer -->
 	<footer>
 		<div class="container">
-			<p>&copy; 2025 {name}. All rights reserved.</p>
+			<p>&copy; 2025 Danar. All rights reserved.</p>
 		</div>
 	</footer>
 </main>
