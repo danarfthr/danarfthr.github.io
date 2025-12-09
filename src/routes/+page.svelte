@@ -10,13 +10,31 @@
 		{
 			title: "RUU Sentiment Analysis 📢",
 			description: "Analyzed 4,472 tweets on the 2025 TNI Law Revision using Python and NLP. Found 75.8% negative sentiment, highlighting civil-military concerns.",
-			link: "https://github.com/Farscent/gamadata-1"
+			links: [
+				{ label: "GitHub", url: "https://github.com/Farscent/gamadata-1" }
+			]
 		},
 		{
 			title: "HealthyHen 🐔", 
 			description: "Built an edge-deployable poultry disease detector with EfficientNetV2-S, achieving 90%+ accuracy on chicken feces image classification.",
-			link: "https://github.com/danarfthr/HealthyHen"
-		}
+			links: [
+				{ label: "GitHub", url: "https://github.com/danarfthr/HealthyHen" }
+			]
+		},
+		{
+			title: "AI Customer Assistant 🤖",
+			description: "Led the development of a WhatsApp-based AI agent for PT Inspeksi Mobil Jogja using GPT-4.1 Mini and GPT-2.5 Flash. Built a simple RAG system for the knowledge base, an n8n workflow for inquiry handling, booking, and payment, and a Google Cloud distance check to auto-calculate service pricing.",
+			links: []
+		},
+		{
+		title: "TB X-Ray CAD 🫁", 
+		description: "Built a tuberculosis detection system by implementing Digital Image Processing using GLCM texture features and SVM classification, achieving 84.25% accuracy and 86.67% specificity on the TBX11K dataset.",
+		links: [
+			{ label: "GitHub", url: "https://github.com/kosmasrio0411/Final-Project-PCD" },
+			{ label: "Paper", url: "https://drive.google.com/file/d/1CC3PnjoD9G5t8q8PatH4G1LRVcnpvthy/view?usp=sharing" }
+		]
+		}		
+		
 	];
 </script>
 
@@ -29,15 +47,22 @@
 	<!-- Hero Section -->
 	<section class="hero">
 		<div class="container">
+			<img src="/photo.jpeg" alt="Danar" class="profile-photo" />
 			<h1 class="name">{name}</h1>
 			<p class="title">{title}</p>
 			<p class="bio">
 				Curious mind exploring Data Science and AI. I enjoy turning messy data into meaningful insights and building simple AI-powered tools that (hopefully) make life a little easier 😄
 			</p>
 			<div class="links">
-				<a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
-				<a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-				<a href="mailto:{email}">Contact</a>
+				<a href={github} target="_blank" rel="noopener noreferrer" title="GitHub">
+					<img src="/github.svg" alt="GitHub" class="icon" />
+				</a>
+				<a href={linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
+					<img src="/linkedin.svg" alt="LinkedIn" class="icon" />
+				</a>
+				<a href="mailto:{email}" title="Email">
+					<img src="/email.svg" alt="Email" class="icon" />
+				</a>
 			</div>
 		</div>
 	</section>
@@ -51,7 +76,11 @@
 					<div class="project-card">
 						<h3>{project.title}</h3>
 						<p>{project.description}</p>
-						<a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+						<div class="project-links">
+							{#each project.links as link}
+								<a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+							{/each}
+						</div>
 					</div>
 				{/each}
 			</div>
@@ -74,7 +103,7 @@
 	}
 
 	:global(body) {
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-family: Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 		line-height: 1.6;
 		color: #222222;
 		background-color: #ffffff;
@@ -103,6 +132,18 @@
 		letter-spacing: -1px;
 	}
 
+	.profile-photo {
+		width: 220px;
+		height: 220px;
+		border-radius: 15%;
+		object-fit: cover;
+		margin-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.3);
+	}
+
 	.title {
 		font-size: 1.5rem;
 		font-weight: 400;
@@ -128,14 +169,20 @@
 	.links a {
 		color: #222222;
 		text-decoration: none;
-		padding: 0.5rem 1rem;
-		border: 1px solid #222222;
 		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.links a:hover {
-		background-color: #222222;
-		color: #fff;
+	.icon {
+		width: 34px;
+		height: 34px;
+	}
+
+	.links a:hover .icon {
+		opacity: 0.6;
+		transform: translateY(-2px);
 	}
 
 	/* Projects Section */
@@ -177,6 +224,12 @@
 	.project-card p {
 		margin-bottom: 1.5rem;
 		color: #666;
+	}
+
+	.project-links {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
 	}
 
 	.project-card a {
