@@ -23,7 +23,7 @@
 		},
 		{
 			title: "AI Customer Assistant 🤖",
-			description: "Led the development of a WhatsApp-based AI agent for PT Inspeksi Mobil Jogja using GPT-4.1 Mini and GPT-2.5 Flash. Built a simple RAG system for the knowledge base, an n8n workflow for inquiry handling, booking, and payment, and a Google Cloud distance check to auto-calculate service pricing.",
+			description: "Led the development of a WhatsApp-based AI agent for PT Inspeksi Mobil Jogja using GPT-4.1 Mini and Gemini-2.5 Flash. Built a simple RAG system for the knowledge base, an n8n workflow for inquiry handling, booking, and payment, and a Google Cloud distance check to auto-calculate service pricing.",
 			links: []
 		},
 		{
